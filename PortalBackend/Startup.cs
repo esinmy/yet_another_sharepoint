@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PortalBackend.Data;
 
 namespace PortalBackend
 {
@@ -26,6 +27,7 @@ namespace PortalBackend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IPersonRepo, MockPersonRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

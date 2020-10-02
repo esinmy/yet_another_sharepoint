@@ -11,7 +11,13 @@ namespace PortalBackend.Controllers
     [ApiController]
     public class PersonsController : ControllerBase
     {
-        private readonly MockPersonRepo _repo = new MockPersonRepo();
+        private readonly IPersonRepo _repo;
+
+        public PersonsController(IPersonRepo repo)
+        {
+            _repo = repo;
+        }
+
         //GET api/persons
         [HttpGet]
         public ActionResult<IEnumerable<Person>> GetAllPersons()
