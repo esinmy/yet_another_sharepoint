@@ -29,7 +29,7 @@ namespace PortalBackend
         {
             services.AddDbContext<PersonContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("PortalConnection")));
             services.AddControllers();
-            services.AddScoped<IPersonRepo, MockPersonRepo>();
+            services.AddScoped<IPersonRepo, SqlServerPersonRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
