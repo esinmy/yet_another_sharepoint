@@ -1,0 +1,29 @@
+.App {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 10fr;
+}
+
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  background: red;
+}
+
+.sidebar {
+  grid-row: 2 / -1;
+  grid-column: 1 / 2;
+  height: 100vh;
+  background: green;
+}
+
+.content {
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+  height: 100vh;
+  background: yellow;
+}
+
+.sidebar__menu {
+  list-style-type: none;
+}

@@ -9,6 +9,7 @@ namespace PortalBackend.Controllers
 {
     //api/commands
     // try to use [controller]
+    // [Route("api/[controller]")]
     [Route("api/persons")]
     [ApiController]
     public class PersonsController : ControllerBase
